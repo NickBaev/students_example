@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation to show all students.
+ *
+ * Available variables:
+ *   - students
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="students">
+    <table>
+        <tr>
+            <td><b>Ф.И.О.</b></td>
+            <td><b>Форма обучения</b></td>
+            <td><b>Дата рождения</b></td>
+            <td colspan="2"><b>Действия</b></td>
+        </tr>
+        {% for student_data in students %}
+            <tr>
+                <td>{{ student_data.name }}</td>
+                <td>{{ student_data.education_type }}</td>
+                <td>{{ student_data.birthdate }} </td>
+                <td><a href="{{ student_data.read }}">Подробно</a></td>
+                <td><a href="{{ student_data.delete }}">Удалить</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>

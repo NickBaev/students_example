@@ -1,0 +1,5 @@
+hello.form:
+  title: 'Students settings'
+  description: 'Configure settings for the students module.'
+  route_name: students.form
+  parent: 'system.admin_config_development'

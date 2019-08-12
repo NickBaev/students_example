@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for Students module.
+ */
+
+use Drupal\user\RoleInterface;
+
+
+function students_install()
+{
+//    user_role_change_permissions(RoleInterface::ANONYMOUS_ID, array(
+//        'add student' => TRUE,
+//    ));
+}
+
+function students_schema(){
+    $schema['students'] = [
+        'description' => 'Students data table.',
+        'fields' => [
+            'id' => [
+                'description' => 'Student unique id.',
+                'type' => 'varchar',
+                'length' => 32,
+                'not null' => TRUE,
+            ],
+            'name' => [
+                'description' => 'Student name.',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+            'surname' => [
+                'description' => 'Student surname.',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+            'middlename' => [
+                'description' => 'Student middlename.',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+            'education_type' => [
+                'description' => 'Education form.',
+                'type' => 'varchar',
+                'mysql_type' => "ENUM('очная', 'очно-заочная', 'заочная')",
+                'not null' => TRUE,
+                'default' => 'очная'
+            ],
+            'birthdate' => [
+                'description' => 'Student birthdate (yyyy-mm-dd).',
+                'type' => 'varchar',
+                'mysql_type' => 'DATE',
+                'not null' => TRUE,
+            ],
+        ],
+        'primary key' => ['id'],
+    ];
+    return $schema;
+}

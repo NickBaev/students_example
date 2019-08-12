@@ -1,0 +1,44 @@
+students.settings:
+  type: config_object
+  label: 'Students settings'
+  mapping:
+    student:
+      type: mapping
+      mapping:
+        page_title:
+          type: text
+          label: 'Student info page title'
+        name:
+          type: string
+          label: 'Student name'
+        surname:
+          type: string
+          label: 'Student surname'
+        middlename:
+          type: string
+          label: 'Student middlename'
+        education_type:
+          type: string
+          label: 'Education type'
+        birthdate:
+          type: date_format
+          label: 'Student birthdate'
+    table:
+      type: mapping
+      mapping:
+        name:
+          type: string
+          label: 'Students table name'
+    students:
+      type: mapping
+      mapping:
+        page_title:
+          type: text
+          label: 'Students page title'
+block.settings.student_block:
+  type: block_settings
+  label: 'Student block'
+  mapping:
+    student_block_settings:
+      type: text
+      label: 'Student block settings'

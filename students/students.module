@@ -1,0 +1,21 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements hook_theme().
+ */
+function students_theme($existing, $type, $theme, $path) {
+    $variables = [
+        'student' => [
+            'variables' => ['student_data' => NULL],
+            'template' => 'student'
+        ],
+        'students' => [
+            'variables' => ['students' => NULL],
+            'template' => 'students'
+        ]
+    ];
+    return $variables;
+}

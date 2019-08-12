@@ -1,0 +1,11 @@
+table:
+  name: "students"
+student:
+  page_title: "Иформация о студенте"
+  name: "Студент"
+  surname: "Студентов"
+  middlename: "Студентович"
+  education_type: "заочная"
+  birthdate: "1996-01-01"
+students:
+  page_title: "Список студентов"

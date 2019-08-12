@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation to show student information.
+ *
+ * Available variables:
+ *  - student_data
+ *
+ * @see template_preprocess_students()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="student">
+    <p>
+        Имя: {{ student_data.name }} <br/>
+        Фамилия: {{ student_data.surname }} <br/>
+        Отчество: {{ student_data.middlename }} <br/>
+        Форма обучения: {{ student_data.education_type }} <br/>
+        Дата рождения: {{ student_data.birthdate }} <br/>
+    </p>
+</div>

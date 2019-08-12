@@ -1,0 +1,7 @@
+name: Students Module
+description: Creates a page showing students with some basic actions (create, update, delete).
+package: Custom
+type: module
+version: 1.0
+core: 8.x
+php: 7.0

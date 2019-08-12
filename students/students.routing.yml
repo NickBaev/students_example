@@ -1,0 +1,28 @@
+students.show:
+  path: 'students/show/{student_id}'
+  defaults:
+    _controller: '\Drupal\students\Controller\StudentController::show'
+  requirements:
+    _permission: 'access content'
+
+students.delete:
+  path: 'students/delete/{student_id}'
+  defaults:
+    _controller: '\Drupal\students\Controller\StudentController::delete'
+  requirements:
+    _permission: 'access content'
+
+students.all:
+  path: 'students/all'
+  defaults:
+    _controller: '\Drupal\students\Controller\StudentsController::all'
+  requirements:
+    _permission: 'access content'
+
+students.form:
+  path: '/admin/config/development/students'
+  defaults:
+    _form: 'Drupal\students\Form\StudentSettingsForm'
+    _title: 'Student default form settings'
+  requirements:
+    _permission: 'access content'
